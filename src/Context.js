@@ -6,7 +6,7 @@ function ContextProvider({children}) {
     const [allPhotos, setAllPhotos] = useState([])
 
     useEffect(() => {
-        fetch("")
+        fetch("https://raw.githubusercontent.com/eprikhodko/photo-store/main/src/images.json")
             .then(response => response.json())
             .then(data => setAllPhotos(data))
     }, []) 
